@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 线性布局
+    layout_width 标签宽度
+    layout_height 标签高度
+    layout_weight 权重占比（只能用于LinearLayout布局里面）
+    orientation  布局方式，垂直或水平布局
+    gravity 标签内部显示位置方式
+    layout_gravity 标签居于父标签显示位置
+    layout_marginTop 外边距 距离上方
+    background 背景（图片或颜色）主要依赖于标签的宽高
+    src  图片，依靠图片的比例
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <!-- <ImageView
+                 android:id="@+id/user_img"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:background="@mipmap/img_user"/>-->
+            <EditText
+                android:id="@+id/phoneEdit"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:drawableBottom="@mipmap/img_line"
+                android:drawableLeft="@mipmap/img_user"
+                android:drawablePadding="15dp"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:hint="请输入11位手机号码"
+                android:inputType="phone" />
+
+            <LinearLayout
+                android:id="@+id/pwLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneEdit"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/img_pw" />
+
+                <EditText
+                    android:id="@+id/pw"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:maxLength="16"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="#aaaaaa" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/pwLayout"
+                android:layout_marginTop="-10dp"
+                android:background="@mipmap/img_line" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:id="@+id/login_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/img_login_btn"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登      录"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/findpw_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/findpw"
+                    android:textSize="18sp"
+                    android:textColor="#2bbb78"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
